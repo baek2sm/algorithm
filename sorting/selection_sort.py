@@ -7,7 +7,5 @@ if __name__ == '__main__':
             if min_value > array[j]:
                 min_value = array[j]
                 index = j
-        temp = array[i]
-        array[i] = array[index]
-        array[index] = temp
+        array[i], array[index] = array[index], array[i]
     print(' '.join(map(lambda x: str(x), array)))

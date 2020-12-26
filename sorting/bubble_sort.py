@@ -3,7 +3,5 @@ if __name__ == '__main__':
     for i in range(10):
         for j in range(9-i):
             if array[j] > array[j+1]:
-                temp = array[j]
-                array[j] = array[j+1]
-                array[j+1] = temp
+                array[j], array[j+1] = array[j+1], array[j]
     print(' '.join(map(lambda x: str(x), array)))

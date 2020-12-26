@@ -3,8 +3,6 @@ if __name__ == '__main__':
     for i in range(1, 10):
         j = i
         while array[j-1] > array[j]:
-            temp = array[j-1]
-            array[j-1] = array[j]
-            array[j] = temp
+            array[j], array[j-1]= array[j-1], array[j]
             j -= 1
     print(' '.join(map(lambda x: str(x), array)));   
